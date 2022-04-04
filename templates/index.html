@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Resume Screening{% endblock %}
+{% block Addnav %}
+<li class="nav-item active">
+    <a class="nav-link" href="/HR">Employeer/HR Page</a>
+</li>
+{% endblock %}
+{% block styleInclude %}
+<style>
+    @media screen and (min-width: 992px) {
+        a.sign_in {
+            width:60%;
+        }
+    }
+    @media screen and (min-width: 1300px) {
+        a.sign_in {
+            width:40%;
+        }
+    }
+    @media screen and (min-width: 300px) {
+        .main_card{
+            margin-top:30px;
+        }
+    }
+    
+    .sign_in{
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none; /* remove underline from anchors */
+        background-color: #dd4b39;
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class='container-fluid'>
+    <div class="container">
+    <div class='row'>
+        <div class="col-md-6 col-xs-12 main_card" style="margin-top:50px;z-index:10;">
+            <h1 class="text-center mt-4 hh">AI Based Resume Ranker</h1>
+            <a href="/login" class="btn btn-lg btn-danger mt-5 sign_in mx-auto d-block" style="z-index:10;"><i class="fab fa-google me-4"></i>Login With Google</a>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <img class="img-fluid mx-auto d-block" src="{{ url_for('static',filename='images/re.png') }}"/>
+        </div>
+    </div>
+</div>
+<svg style="position:absolute;bottom:0;left:0;"  id="svg" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient"><stop offset="5%" stop-color="#eb144c88"></stop><stop offset="95%" stop-color="#32ded488"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,200 0,200 C 94.34615384615384,227.51538461538462 188.69230769230768,255.03076923076924 267,252 C 345.3076923076923,248.96923076923076 407.5769230769231,215.3923076923077 479,208 C 550.4230769230769,200.6076923076923 631,219.4 715,219 C 799,218.6 886.4230769230769,199.0076923076923 958,177 C 1029.576923076923,154.9923076923077 1085.3076923076924,130.56923076923076 1163,134 C 1240.6923076923076,137.43076923076924 1340.3461538461538,168.7153846153846 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150"></path><defs><linearGradient id="gradient"><stop offset="5%" stop-color="#eb144cff"></stop><stop offset="95%" stop-color="#32ded4ff"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,400 0,400 C 76.46666666666667,405.8179487179487 152.93333333333334,411.6358974358974 229,393 C 305.06666666666666,374.3641025641026 380.73333333333335,331.27435897435896 462,348 C 543.2666666666667,364.72564102564104 630.1333333333332,441.26666666666665 709,467 C 787.8666666666668,492.73333333333335 858.7333333333333,467.6589743589744 950,430 C 1041.2666666666667,392.3410256410256 1152.9333333333334,342.0974358974359 1238,335 C 1323.0666666666666,327.9025641025641 1381.5333333333333,363.9512820512821 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150"></path></svg>
+</div>
+
+
+{% endblock %}
